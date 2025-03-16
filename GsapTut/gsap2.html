@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap Timeline</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color:rgb(255, 255, 255);
+
+        }
+        body{
+            background-color: black;
+        }
+        #box1{
+            height: 200px;
+            width:200px;
+            background-color: red;
+            border: 2px solid black;
+        }
+        #box2{
+            height: 200px;
+            width:200px;
+            background-color: rgb(43, 207, 81);
+            border: 2px solid black;
+        }
+        #box3{
+            height: 200px;
+            width:200px;
+            background-color: rgb(39, 186, 249);
+            border: 2px solid black;
+        }
+            #nav{
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 50px;
+        }
+        #part2{
+            display: flex;
+            gap:50px;
+
+        }
+
+        h1{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            font-size: 80px;
+            white-space: nowrap;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+        <h2>FLASH</h2>
+        <div id="part2">
+            <h4>WORK</h4>
+            <h4>ABOUT</h4>
+            <h4>COURSES</h4>
+            <h4>BLOG</h4>
+        </div>
+    </div>
+    <h1>MR.FLASH_007</h1>
+<!-- 
+
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div> -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+
+        // gsap.to("#box1",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2,
+        //     delay:1,
+        //     borderRadius:"50%"
+        // })
+        // gsap.to("#box2",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2, 
+        //     delay:3,
+        //     // borderRadius:"50%"
+        // })
+        // gsap.to("#box3",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2, 
+        //     delay:6,
+        //     // borderRadius:"50%"
+        // })
+
+        // var tl = gsap.timeline()
+        // tl.to("#box1",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2,
+           
+        //     borderRadius:"50%"
+        // })
+        //   tl.to("#box2",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2,  
+        //     borderRadius:"50%"
+        // })
+        // tl.to("#box3",{
+        //     x:500,
+        //     rotate:360,
+        //     duration:2, 
+        //     borderRadius:"50%"
+        // })
+
+        var tl = gsap.timeline()
+
+        tl.from("h2",{
+            y:-30,
+            opacity:0,
+            duration:1,
+            delay:0.5
+        })
+        tl.from("h4",{
+            y:-30,
+            opacity:0,
+            duration:1,
+            stagger:0.2
+        })
+        tl.from("h1",{
+            y:20,
+            opacity:0,
+            duration:0.5,
+            scale:0.5
+            
+        })
+
+    </script>
+</body>
+</html>
+
